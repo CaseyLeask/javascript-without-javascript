@@ -8,7 +8,8 @@ var pkg = require('./package.json'),
   browserify = require('gulp-browserify'),
   uglify = require('gulp-uglify'),
   jade = require('gulp-jade'),
-  stylus = require('gulp-stylus'),
+  sass = require('gulp-sass'),
+  sourcemaps = require('gulp-sourcemaps'),
   autoprefixer = require('gulp-autoprefixer'),
   csso = require('gulp-csso'),
   through = require('through'),
@@ -37,15 +38,13 @@ gulp.task('html', ['clean:html'], function() {
 });
 
 gulp.task('css', ['clean:css'], function() {
-  return gulp.src('src/styles/main.styl')
+  return gulp.src('src/styles/main.scss')
     .pipe(isDist ? through() : plumber())
-    .pipe(stylus({
-      // Allow CSS to be imported from node_modules and bower_components
-      'include css': true,
-      'paths': ['./node_modules', './bower_components']
-    }))
+    .pipe(sourcemaps.init())
+    .pipe(sass())
     .pipe(autoprefixer('last 2 versions', { map: false }))
     .pipe(isDist ? csso() : through())
+    .pipe(sourcemaps.write())
     .pipe(rename('build.css'))
     .pipe(gulp.dest('dist/build'))
     .pipe(connect.reload());
@@ -93,7 +92,7 @@ gulp.task('connect', ['build'], function(done) {
 
 gulp.task('watch', function() {
   gulp.watch('src/**/*.jade', ['html']);
-  gulp.watch('src/styles/**/*.styl', ['css']);
+  gulp.watch('src/styles/**/*.scss', ['css']);
   gulp.watch('src/images/**/*', ['images']);
   gulp.watch([
     'src/scripts/**/*.js',
