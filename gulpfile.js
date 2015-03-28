@@ -1,4 +1,6 @@
-var pkg = require('./package.json'),
+var fs = require('fs'),
+  es = require('event-stream'),
+  pkg = require('./package.json'),
   gulp = require('gulp'),
   gutil = require('gulp-util'),
   plumber = require('gulp-plumber'),
@@ -17,6 +19,22 @@ var pkg = require('./package.json'),
   ghpages = require('gh-pages'),
   path = require('path'),
   isDist = process.argv.indexOf('serve') === -1;
+
+function renameCssToSass(path) {
+  return gulp.src(path + '/**/*.css')
+    .pipe(rename({
+      extname: ".scss"
+    }))
+    .pipe(gulp.dest(path));
+}
+
+gulp.task('bowerPrepare', function() {
+  return renameCssToSass('bower_components');
+});
+
+gulp.task('npmPrepare', function() {
+  return renameCssToSass('node_modules');
+});
 
 gulp.task('js', ['clean:js'], function() {
   return gulp.src('src/scripts/main.js')
@@ -41,7 +59,7 @@ gulp.task('css', ['clean:css'], function() {
   return gulp.src('src/styles/main.scss')
     .pipe(isDist ? through() : plumber())
     .pipe(sourcemaps.init())
-    .pipe(sass())
+    .pipe(sass({includePaths: ['bower_components', 'node_modules']}))
     .pipe(autoprefixer('last 2 versions', { map: false }))
     .pipe(isDist ? csso() : through())
     .pipe(sourcemaps.write())
