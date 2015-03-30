@@ -20,22 +20,6 @@ var fs = require('fs'),
   path = require('path'),
   isDist = process.argv.indexOf('serve') === -1;
 
-function renameCssToSass(path) {
-  return gulp.src(path + '/**/*.css')
-    .pipe(rename({
-      extname: ".scss"
-    }))
-    .pipe(gulp.dest(path));
-}
-
-gulp.task('bowerPrepare', function() {
-  return renameCssToSass('bower_components');
-});
-
-gulp.task('npmPrepare', function() {
-  return renameCssToSass('node_modules');
-});
-
 gulp.task('js', ['clean:js'], function() {
   return gulp.src('src/scripts/main.js')
     .pipe(isDist ? through() : plumber())

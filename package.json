@@ -1,9 +1,6 @@
 {
   "name": "presentation-javascript-without-javascript",
   "version": "0.0.0",
-  "scripts" : {
-    "postinstall" : "gulp npmPrepare"
-  },
   "dependencies": {},
   "devDependencies": {
     "bespoke": "^1.0.0",
