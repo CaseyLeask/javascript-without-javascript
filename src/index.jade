@@ -10,14 +10,39 @@ html
   body
 
     article
-
       section
         h1 Javascript Without Javascript
-        aside Write your damn talk!
 
       section
-        h2 Syntax Highlighting
-        h3 Powered by <a href="http://twitter.com/LeaVerou">Lea Verou</a>'s <a href="https://github.com/LeaVerou/prism">Prism</a>
+        h2 By this guy
+        img(src="images/profile.jpeg", class="profile")
+        a(href="http://twitter.com/CaseyLeask") @CaseyLeask
+
+      section
+        h3 When making decisions
+        h3 I had two questions
+
+      section
+        h1 How do we create something maintainable?
+
+      section
+        h1 How do we use all the new goodness?
+
+      section
+        h1 Use standards.
+
+      section
+        h3 Use stable, strongly supported languages and dependencies
+        
+      section
+        h2 Reduce code duplication
+
+      section
+        h2 Have a clear separation of responsibilities
+
+      section
+        h4 Syntax Highlighting
+        h5 Powered by <a href="http://twitter.com/LeaVerou">Lea Verou</a>'s <a href="https://github.com/LeaVerou/prism">Prism</a>
         pre
           code.language-javascript.
             bespoke.from('article', [
@@ -27,16 +52,16 @@ html
             ]);
 
       section(data-bespoke-hash='named-route')
-        h2 Named Route
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-hash">bespoke-hash</a>
+        h3 Named Route
+        h5 Powered by <a href="https://github.com/markdalgleish/bespoke-hash">bespoke-hash</a>
         p Look up! This route has been named with a <em>'data-bespoke-hash'</em> attribute.
 
       section.emphatic-text(data-bespoke-backdrop='emphatic')
-        h2 Emphatic Slide!
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-backdrop">bespoke-backdrop</a>
+        h3 Emphatic Slide!
+        h4 Powered by <a href="https://github.com/markdalgleish/bespoke-backdrop">bespoke-backdrop</a>
 
       section
-        h2 Just the beginning...
+        h3 Just the beginning...
         br
         ul
           li Edit <a href="http://jade-lang.com/">Jade</a> markup in <em>'src/index.jade'</em>
