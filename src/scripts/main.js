@@ -1,13 +1,14 @@
 // Require Node modules in the browser thanks to Browserify: http://browserify.org
 var bespoke = require('bespoke'),
-  cube = require('bespoke-theme-cube'),
+  cube = require('bespoke-theme-voltaire'),
   keys = require('bespoke-keys'),
   touch = require('bespoke-touch'),
   backdrop = require('bespoke-backdrop'),
   scale = require('bespoke-scale'),
   hash = require('bespoke-hash'),
-  progress = require('bespoke-progress');
-
+  progress = require('bespoke-progress'),
+  secondary = require('bespoke-secondary'),
+  getActiveSlide = require('./getActiveSlide.js');
 // Bespoke.js
 bespoke.from('article', [
   cube(),
@@ -16,7 +17,9 @@ bespoke.from('article', [
   backdrop(),
   scale(),
   hash(),
-  progress()
+  progress(),
+  secondary(),
+  getActiveSlide()
 ]);
 
 // Prism syntax highlighting
