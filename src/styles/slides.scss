@@ -1,11 +1,12 @@
 $transition-speed: 0.4;
 $transition-timing-function: ease;
+$default-background-color: azure;
 .bespoke-slide aside {
   display: none;
 }
 .bespoke-parent {
-  background: azure;
-  color: #404040;
+  background: $default-background-color;
+  color: darken($default-background-color, 90%);
 }
 .bespoke-slide {
   text-shadow: none;
@@ -56,9 +57,9 @@ h1 {
 h2 {
   font-family: didot,times new roman,serif;
   font-style: italic;
-  font-size: 4em;
+  font-size: 3.5em;
   font-weight: 300;
-  letter-spacing: -1px;
+  letter-spacing: 0;
   margin-top: 0.1em;
   margin-bottom: 0.1em;
 }
@@ -70,7 +71,6 @@ h3 {
   font-weight: normal;
   margin-top: 0.25em;
   margin-bottom: 0.25em;
-  color: #606060;
 }
 
 h4 {
@@ -117,3 +117,25 @@ a {
   text-decoration: none;
 }
 
+blink {
+  -webkit-animation: blink 1s step-end infinite;
+  -moz-animation: blink 1s step-end infinite;
+  -o-animation: blink 1s step-end infinite;
+  animation: blink 1s step-end infinite;
+}
+
+@-webkit-keyframes blink {
+  67% { opacity: 0; }
+}
+
+@-moz-keyframes blink {
+  67% { opacity: 0; }
+}
+
+@-o-keyframes blink {
+  67% { opacity: 0; }
+}
+
+@keyframes blink {
+  67% { opacity: 0; }
+}
