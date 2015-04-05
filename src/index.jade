@@ -21,6 +21,9 @@ html
         a(href="http://twitter.com/CaseyLeask") @CaseyLeask
 
       section
+        h1 Where we've come from
+
+      section
         h2 History of the web
         h4 The first webpage (90')
 
@@ -269,7 +272,7 @@ html
           li Significant Whitespace (!)
 
       section
-        h4 HTML 5 (2008 - 2014)
+        img(src="images/html5-taxonomy.svg")
         aside
           2008 – First Public Working Draft
           2011 – Last Call
@@ -280,10 +283,45 @@ html
         img(src="images/css3-taxonomy.svg")
 
       section
-        h3 Single Page Apps (2011)
+        h2 Single Page Apps (2011)
+        aside backbone, angular, ember
 
       section
-        h4 HTML 5.1 (2012 - 2016?)
+        pre
+          code.language-markup.
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                &lt;div id="wrapper"&gt;
+                &lt;/div&gt;
+                &lt;script src="main.js" /&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+
+      section
+        h1 Progressive JS (2013)
+        aside Accessibility / SEO
+
+      section
+        pre
+          code.language-markup.
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                &lt;div id="wrapper"&gt;
+                  &lt;p&gt;Actual content&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;script async src="main.js" /&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+
+      section
+        h1 HTML 5.1
+        h2 (2012 - 2016?)
         aside
           2012 - First Working Draft
           2014 - Last Call
@@ -293,12 +331,6 @@ html
       section
         h2 ECMAScript 6 (2015)
         p Community driven
-
-      section
-        h1 Progressive JS (2013)
-
-      section
-        h1 Accessibility / SEO
 
       section
         h1 SEEK Hackday
@@ -327,22 +359,6 @@ html
 
       section
         h2 Have a clear separation of responsibilities
-
-      section
-        h4 Syntax Highlighting
-        h5 Powered by <a href="http://twitter.com/LeaVerou">Lea Verou</a>'s <a href="https://github.com/LeaVerou/prism">Prism</a>
-        pre
-          code.language-javascript.
-            bespoke.from('article', [
-              classes(),
-              keys(),
-              touch()
-            ]);
-
-      section(data-bespoke-hash='named-route')
-        h3 Named Route
-        h5 Powered by <a href="https://github.com/markdalgleish/bespoke-hash">bespoke-hash</a>
-        p Look up! This route has been named with a <em>'data-bespoke-hash'</em> attribute.
 
       section.emphatic-text(data-bespoke-backdrop='emphatic')
         h3 Emphatic Slide!

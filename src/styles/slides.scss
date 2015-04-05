@@ -1,7 +1,10 @@
 $transition-speed: 0.4;
 $transition-timing-function: ease;
 $default-background-color: azure;
-.bespoke-slide aside {
+$slide-width: 800px;
+$slide-height: 600px;
+
+.bespoke-slide > aside {
   display: none;
 }
 .bespoke-parent {
@@ -9,6 +12,11 @@ $default-background-color: azure;
   color: darken($default-background-color, 90%);
 }
 .bespoke-slide {
+  width: $slide-width;
+  height: $slide-height;
+  margin-left: -$slide-width/2;
+  margin-top: -$slide-height/2;
+
   text-shadow: none;
   &, > * {
     opacity: 0;
