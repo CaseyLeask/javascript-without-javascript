@@ -246,7 +246,7 @@ html
           li Box properties
 
       section
-        h3 Macromedia Flash (97)
+        h3 Macromedia Flash (97')
         ul
           li Vector graphics
           li Animation
@@ -332,12 +332,22 @@ html
         h1 iPhone (2007)
 
       section
+        img(src="images/awkward-dog.jpg")
+        h2 320 x 480?
+
+      section
         h2 ECMAScript 5th Edition (2009)
         ul
           li Strict Mode
           li JSON.parse, JSON.stringify
           li bind
           li map, reduce, filter, forEach..
+
+      section
+        h2 Polyfills (2009)
+        h3
+          a(href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter") Array.prototype.filter()
+        aside Bringing a browser UP to standards
 
       section
         h2 CoffeeScript (2009)
@@ -349,7 +359,8 @@ html
           li Significant Whitespace (!)
 
       section
-        h1 Responsive Web Design (2010)
+        h4 Responsive Web Design (2010)
+        img(src="images/boston_globe_responsive_website.jpg")
         aside Ethan Marcotte in A List Apart 
 
       section
@@ -369,7 +380,9 @@ html
           li AngularJS (2009)
           li Backbone.js (2010)
           li Ember.js (2011)
-        aside Graceful Degradation 
+        aside
+          p Graceful Degradation 
+          p No regard for first render
 
       section
         pre
@@ -394,7 +407,9 @@ html
               &amp;&amp; 'addEventListener' in window) {
               // bootstrap the javascript application
             }
-        aside BBC Responsive News
+        aside
+          p BBC Responsive News
+          p Differing browser capabilities make progressive enhancement really, really hard
 
       section
         h2 Splits browsers into
