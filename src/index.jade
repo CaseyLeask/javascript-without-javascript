@@ -22,11 +22,12 @@ html
 
       section
         h1 What does that even mean?
-        aside In a nutshell, how do I get the benefits of what I use JS for, without relying on it?
+        aside
+          p In a nutshell, how do I get the benefits of JS, without relying on it?
 
       section
         h1 Why wouldn't I just use JS?
-        aside Because you cannot rely on JavaScript
+        p Because you cannot rely on JavaScript
 
       section
         h1 Does your site work for your visitors?
@@ -67,7 +68,7 @@ html
         h1 Why am I so cranky?
 
       section
-        h1 A look at where have we come from
+        h1 A look at where we have come from
 
       section
         h2 History of the web
@@ -385,6 +386,47 @@ html
             &lt;/html&gt;
 
       section
+        h1 Cutting the Mustard (2012)
+        pre
+          code.language-javascript.
+            if('querySelector' in document
+              &amp;&amp; 'localStorage' in window
+              &amp;&amp; 'addEventListener' in window) {
+              // bootstrap the javascript application
+            }
+        aside BBC Responsive News
+
+      section
+        h2 Splits browsers into
+        h3 'HTML5' &amp; 'HTML4'
+
+      section
+        h2 HTML5 browsers
+        ul
+          li IE9+
+          li Firefox 3.5+
+          li Opera 9+ (and probably further back)
+          li Safari 4+
+          li Chrome 1+ (I think)
+          li iPhone and iPad iOS1+
+          li Android phone and tablets 2.1+
+          li Blackberry OS6+
+          li Windows 7.5+ (new Mango version)
+          li Mobile Firefox (all the versions they tested)
+          li Opera Mobile (all the versions they tested)
+
+      section
+        h2 HTML4 browsers
+        ul
+          li IE8-
+          li Blackberry OS5-
+          li Nokia S60 v6-
+          li Nokia S40 (all versions)
+          li All other Symbian variants
+          li Windows 7 phone (pre-Mango)
+          li …and many more that are too numerous to mention
+
+      section
         h1 Progressive JS (2013)
         aside
           p Accessibility / SEO
@@ -433,9 +475,15 @@ html
 
       section
         h1 Use standards.
+        aside talk about tables
+
+      section
+        h1 Progressively enhance
+        aside Standards age gracefully. Relying on these and improving where possible is great.
 
       section
         h3 Use stable, strongly supported languages and dependencies
+        aside talk about flash
         
       section
         h2 Reduce code duplication
@@ -443,9 +491,11 @@ html
       section
         h2 Have a clear separation of responsibilities
 
+      section
+        h2 Are you separating on concerns or technologies?
+
       section.emphatic-text(data-bespoke-backdrop='emphatic')
         h3 Emphatic Slide!
-        h4 Powered by <a href="https://github.com/markdalgleish/bespoke-backdrop">bespoke-backdrop</a>
 
       section
         h3 References
@@ -459,5 +509,7 @@ html
             a(href="http://en.wikipedia.org/wiki/HTML#HTML_versions_timeline") http://en.wikipedia.org/wiki/HTML#HTML_versions_timeline
           li
             a(href="http://www.w3.org/TR/REC-html40-971218/intro/intro.html") http://www.w3.org/TR/REC-html40-971218/intro/intro.html
+          li
+            a(href="http://responsivenews.co.uk/post/18948466399/cutting-the-mustard") http://responsivenews.co.uk/post/18948466399/cutting-the-mustard
 
     script(src='build/build.js')
