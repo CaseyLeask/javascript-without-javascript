@@ -6,22 +6,68 @@ html
     title Javascript Without Javascript
 
     link(rel='stylesheet', type='text/css', href='build/build.css')
-
   body
 
     article
       section
 
       section
+        h2 A talk by this guy
+        img(src="images/profile.jpeg", class="profile")
+        h5
+          a(href="http://twitter.com/CaseyLeask") @CaseyLeask
+
+      section
         h1 Javascript Without Javascript
 
       section
-        h2 By this guy
-        img(src="images/profile.jpeg", class="profile")
-        a(href="http://twitter.com/CaseyLeask") @CaseyLeask
+        h1 What does that even mean?
+        aside In a nutshell, how do I get the benefits of what I use JS for, without relying on it?
 
       section
-        h1 Where we've come from
+        h1 Why wouldn't I just use JS?
+        aside Because you cannot rely on JavaScript
+
+      section
+        h1 Does your site work for your visitors?
+        ul
+          li Screen readers
+          li Google
+          li 3G connections
+          li Old browsers
+
+      section
+        h1 If you don't care about any of those things, go for it
+
+      section
+        h3 Do you do this?
+        pre
+          code.language-markup.
+            &lt;script
+              src="https://ajax.googleapis.com/../jquery.min.js"&gt;
+            &lt;/script src&gt;
+
+      section
+        h1 You shouldn't
+
+      section
+        h4 Google has no SLA with you
+
+      section
+        h2 You cannot assume JS will always work
+        ul
+          li External CDNs
+          li Network failures
+          li Coding errors
+          li Browser plugins
+          li 
+            a(href="http://www.eveonline.com/universe/spaceships/") Cross Origin problems
+
+      section
+        h1 Why am I so cranky?
+
+      section
+        h1 A look at where have we come from
 
       section
         h2 History of the web
@@ -331,9 +377,6 @@ html
       section
         h2 ECMAScript 6 (2015)
         p Community driven
-
-      section
-        h1 SEEK Hackday
 
       section
         h1 My project
