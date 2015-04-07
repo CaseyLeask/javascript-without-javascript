@@ -43,6 +43,9 @@ a {
 :not(pre) > code[class*="language-"], pre[class*="language-"] {
   background: #272822 !important;
 }
+.language-markup.smaller-text {
+  font-size: 0.7em;
+}
 .profile {
   border-radius: 50%;
 }
